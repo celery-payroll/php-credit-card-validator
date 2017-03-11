@@ -150,7 +150,7 @@ class CreditCard
     // PROTECTED
     // ---------------------------------------------------------
 
-    protected static function creditCardType($number)
+    public static function creditCardType($number)
     {
         foreach (self::$cards as $type => $card) {
             if (preg_match($card['pattern'], $number)) {
